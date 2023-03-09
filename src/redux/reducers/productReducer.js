@@ -9,6 +9,7 @@ const initialState = {
         category: "Learner"
     }]
 }
+// reducer takes initial action and state and returns new state
 // destructuring the action
 export const productReducer = (state, {type, payload}) => {
 
