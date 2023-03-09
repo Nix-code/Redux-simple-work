@@ -7,4 +7,6 @@ import { productReducer } from './productReducer';
 const reducer = combineReducers({
     // key: val
     allProducts: productReducer 
-})
+}) 
+// created action, action-types, reducer, combined reducers , time to create store
+export default reducer;

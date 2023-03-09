@@ -7,11 +7,11 @@ const initialState = {
         id: 1,
         title: "Potato",
         category: "Learner"
-    }]
-}
+    }],
+};
 // reducer takes initial action and state and returns new state
 // destructuring the action
-export const productReducer = (state, {type, payload}) => {
+export const productReducer = (state = initialState, {type, payload}) => {
 
     switch(type) {
         case ActionTypes.SET_PRODUCTS:
@@ -19,4 +19,4 @@ export const productReducer = (state, {type, payload}) => {
         default:
             return state;
     }
-}
+};
