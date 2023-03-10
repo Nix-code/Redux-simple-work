@@ -1,7 +1,8 @@
 // next step after header is the product listing
 import React, { useEffect } from "react";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import {setProducts }from "../redux/actions/productActions";
 import ProductComponent from "./ProductComponent";
 
 const ProductListing = () => {
@@ -11,25 +12,31 @@ const ProductListing = () => {
 
  
     
-    const products = useSelector((state) => state.allProducts.products);
+    const products = useSelector((state) => state);
+    const dispatch = useDispatch();
 
 
        // getting the contents from the api
        const fetchProducts = async () => {
         const response = await axios
           .get("https://fakestoreapi.com/products")
-          .then((res) => {
-            console.log(res.data);
-          })
+          
           .catch((err) => {
             console.log("Err", err);
           });
-        console.log(response);
+         
+            dispatch(setProducts(response.data))
+            
     };
+
     useEffect(()=> {
         fetchProducts();
     },[]);
-
+    // after we sucessfully called the api,
+    // our work is to store the data in a store
+    // we use dispatch for this
+  
+    console.log(products);
 
     
     // console.log(products);
