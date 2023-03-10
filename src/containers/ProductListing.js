@@ -12,7 +12,7 @@ const ProductListing = () => {
 
  
     
-    const products = useSelector((state) => state);
+    const products = useSelector((state) => state.allProducts.products);
     const dispatch = useDispatch();
 
 
@@ -35,8 +35,7 @@ const ProductListing = () => {
     // after we sucessfully called the api,
     // our work is to store the data in a store
     // we use dispatch for this
-  
-    console.log(products);
+
 
     
     // console.log(products);

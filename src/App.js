@@ -16,7 +16,7 @@ function App() {
       <Routes>
       {/* Switch=> Routes , use component as < /> */}
       {/* <Route path = "/product/:productId" exact component = {ProductDetail} /> */}
-          <Route path = "/" exact element = {<ProductListing/>} />
+          <Route path = "/Redux-simple-work/" exact element = {<ProductListing/>} />
           <Route path = "/product/:productId" exact element = {<ProductDetail/>} />
           <Route>404 Not Found !</Route>
 
