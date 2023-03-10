@@ -20,3 +20,4 @@ export const productReducer = (state = initialState, {type, payload}) => {
             return state;
     }
 };
+  
