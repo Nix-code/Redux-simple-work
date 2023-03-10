@@ -11,3 +11,5 @@ const ProductDetail = () => {
 }
 
 export default ProductDetail;
+// now we will add , product listing, components, details in a App.js
+// we will require Router for this
