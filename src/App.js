@@ -5,11 +5,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductListing from './containers/ProductListing';
 import ProductDetail from './containers/ProductDetail';
 import Header from './containers/Header';
+// import SearchBar from './containers/SearchBar';
 function App() {
   return (
     <div className='App'>
       <Router>
+    
       <Header />
+     
       <Routes>
       {/* Switch=> Routes , use component as < /> */}
       {/* <Route path = "/product/:productId" exact component = {ProductDetail} /> */}
